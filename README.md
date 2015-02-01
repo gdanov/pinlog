@@ -4,7 +4,9 @@ I eliminate the distraction of the constantly moving text in the console. Has ha
 
 To use just do
 
+```
 nodemon | pinlog
+```
 
 Works by clearing the screen when certain pattern is detected in the output.
 

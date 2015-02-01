@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "source-map-support": "0.2.8",
+    "dateformat": "1.0.11"
+  },
+  "keywords": [
+    "log",
+    "console",
+    "output",
+    "shell"
+  ],
+  "version": "0.1.1-SNAPSHOT",
+  "description": "Simple tool that 'pins' the output of tools like nodemon to always start at the top of the terminal window",
+  "name": "pinlog",
+  "bin": {
+    "pinlog": "./run"
+  }
+}

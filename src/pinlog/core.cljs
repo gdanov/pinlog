@@ -16,7 +16,7 @@
 		 #(>= (.indexOf % "[nodemon] restarting due to changes...") 0)
 		 ]))
 
-(println "test" (rules "Compiling \"out/pinlog.js\" from [\"src\"]..."))
+;(println "test" (rules "Compiling \"out/pinlog.js\" from [\"src\"]..."))
 
 
 (defn -main []

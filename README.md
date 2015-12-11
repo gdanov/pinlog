@@ -10,7 +10,7 @@ nodemon | pinlog
 
 Works by clearing the screen when certain pattern is detected in the output.
 
-Rules are loaded from ./.pinlog and must be array with JavaScript futctions.
+Rules are loaded from ```./.pinlog``` and must be array with JavaScript futctions.
 
 Example:
 ```

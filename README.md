@@ -10,4 +10,17 @@ nodemon | pinlog
 
 Works by clearing the screen when certain pattern is detected in the output.
 
-Toy project while learning clojurescript, hence the funny js code.
+Rules are loaded from ./.pinlog and must be array with JavaScript futctions.
+
+Example:
+```
+[
+	function lein(str){
+		return /Compiling \"/.test(str);
+	}
+]
+```
+
+If you want to run it locally from soucre use ```lein npm link```
+
+

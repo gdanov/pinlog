@@ -1,0 +1,8 @@
+[
+	function lein(str){
+		return /Compiling \"/.test(str);
+	},
+	function test_rule(str){
+	return cljs.core.re_find.call(null,/test.+/,str);
+},
+function test_rule_2(str){}]

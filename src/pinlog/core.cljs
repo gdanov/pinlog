@@ -27,11 +27,10 @@
         (do
           (println "can't load rules due to:" err)
           (swap! rules (fn [& _] []))))
-      (println "active rules:" (map #(.-name %)  @rules))) ) 
-  )
+      (println "active rules:" (map #(.-name %)  @rules)))))
  
 (defn check-rules [chunk]
-  (some #(% chunk) (seq  @rules)))
+  (some #(and (% chunk) (.-name %)) (seq  @rules)))
  
 (defn -main []
  
@@ -41,9 +40,9 @@
 		(fn []
 			(let [chunk (.read js/process.stdin)]
 				(when (not (nil? chunk))
-					(do (if (check-rules chunk) (println "\033[2J\033[0;0H~~~ " (dFormat (js/Date.) "HH:MM ss"))) 
+					(do (if-let [rule-name (check-rules chunk)] (println "\033[2J\033[0;0H~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" (dFormat (js/Date.) "HH:MM ss") "[" rule-name  "] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"))
 							(.write js/process.stdout chunk))))))
-   
+
   (.on js/process.stderr "readable"
     (fn [] (.write js/process.stdout (str "ERR:" (.read js/process.stderr))))))
 

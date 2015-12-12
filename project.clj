@@ -1,4 +1,4 @@
-(defproject pinlog "0.1.0-SNAPSHOT"
+(defproject pinlog "0.1.5-SNAPSHOT"
   :description "Simple tool that 'pins' the output of tools like nodemon to always start at the top of the terminal window"
   :url "https://github.com/gdanov/pinlog.git/"
 

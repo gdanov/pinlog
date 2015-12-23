@@ -6,4 +6,4 @@ try {
 require("./out/goog/bootstrap/nodejs.js");
 require("./out/pinlog.js");
 goog.require("pinlog.core");
-goog.require("cljs.nodejscli");
+goog.require("cljs.nodejscli")
